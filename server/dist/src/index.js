@@ -11,6 +11,7 @@ const helmet_1 = __importDefault(require("helmet"));
 const morgan_1 = __importDefault(require("morgan"));
 const dashboardRoutes_1 = __importDefault(require("./routes/dashboardRoutes"));
 const productRoutes_1 = __importDefault(require("./routes/productRoutes"));
+const userRoutes_1 = __importDefault(require("./routes/userRoutes"));
 /* ROUTE IMPORTS */
 // import dashboardRoutes from "./routes/dashboardRoutes";
 // import productRoutes from "./routes/productRoutes";
@@ -29,6 +30,7 @@ app.use((0, cors_1.default)());
 /* ROUTES */
 app.use("/dashboard", dashboardRoutes_1.default); // http://localhost:8000/dashboard
 app.use("/products", productRoutes_1.default); // http://localhost:8000/products
+app.use("/users", userRoutes_1.default); // http://localhost:8000/users
 /* SERVER */
 const port = Number(process.env.PORT) || 3001;
 app.listen(port, "0.0.0.0", () => {
